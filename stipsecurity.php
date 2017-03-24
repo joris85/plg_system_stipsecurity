@@ -7,7 +7,7 @@
  * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
  */
 
-class PlgSystemSdipwhitelist extends JPlugin
+class PlgSystemStipsecurity extends JPlugin
 {
 
 	function __construct(& $subject, $config)
@@ -19,7 +19,7 @@ class PlgSystemSdipwhitelist extends JPlugin
 	{
 		$app = JFactory::getApplication();
 
-		$uri_match = 'beheer';
+		$uri_match = 'stip/beheer';
 		$uri = $_SERVER["REQUEST_URI"];
 		$host = $_SERVER["HOST"];
 		$remote_ip = $_SERVER['REMOTE_ADDR'];
@@ -49,7 +49,7 @@ class PlgSystemSdipwhitelist extends JPlugin
 
 			}
 
-			$app->redirect($host.'administrator');
+			$app->redirect($host.'stip/administrator');
 		}
 
 	}
