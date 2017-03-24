@@ -1,7 +1,7 @@
 <?php
 /**
  * @package     Joomla.Site
- * @subpackage  plg_system_sdipwhitelist
+ * @subpackage  plg_system_stipsecurity
  *
  * @copyright   GNU GPL3
  * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
@@ -19,7 +19,7 @@ class PlgSystemStipsecurity extends JPlugin
 	{
 		$app = JFactory::getApplication();
 
-		$uri_match = 'stip/beheer';
+		$uri_match = 'beheer';
 		$uri = $_SERVER["REQUEST_URI"];
 		$host = $_SERVER["HOST"];
 		$remote_ip = $_SERVER['REMOTE_ADDR'];
@@ -49,7 +49,7 @@ class PlgSystemStipsecurity extends JPlugin
 
 			}
 
-			$app->redirect($host.'stip/administrator');
+			$app->redirect($host.'administrator');
 		}
 
 	}
